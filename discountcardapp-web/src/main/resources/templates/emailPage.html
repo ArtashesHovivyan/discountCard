@@ -1,0 +1,422 @@
+﻿<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ուղարկել նամակ |- S-Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+    <!--My Css-->
+    <link href="assets/css/myStyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box">
+
+                    <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/S-Market0.png" alt="" height="25">
+                                </span>
+                        <span class="logo-lg">
+                                    <img src="assets/images/S-Market4.png" alt="" height="25">
+                                </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
+                        id="vertical-menu-btn">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+            </div>
+            <div class="d-flex">
+<!--                <div class="dropdown d-none d-md-block ml-2;">-->
+<!--                    <a href="/log"> <button type="button" class="btn header-item waves-effect">-->
+<!--                        <img class="mr-2" src="assets/images/flags/login.png" height="18"> Login-->
+<!--                    </button></a>-->
+<!--                </div>-->
+                <div class="dropdown d-inline-block d-lg-none ml-2">
+                    <button type="button" class="btn header-item noti-icon waves-effect"
+                            id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="mdi mdi-magnify"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                         aria-labelledby="page-header-search-dropdown">
+
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..."
+                                           aria-label="Recipient's username">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="dropdown d-none d-lg-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                        <i class="mdi mdi-fullscreen"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+
+        <div data-simplebar="" class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">Գլխավոր</li>
+
+                    <li>
+                        <a href="/" class="waves-effect">
+                            <i class="ti-search"></i>
+                            <span>Փնտրել քարտը</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/allUsers" class=" waves-effect">
+                            <i class="ti-calendar"></i>
+                            <span>Բոլոր քարտերը</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/register" class=" waves-effect">
+                            <i class="ti-credit-card"></i><span class="badge badge-pill badge-primary float-right">ՆՈՐ</span>
+                            <span>Գրանցել քարդ</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-title">Ֆինանսներ</li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ti-view-grid"></i>
+                            <span>Գումար</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/cashRange">Հաշիվներ</a></li>
+                            <li><a href="/creditList">Պարտքի ցուցակ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-title">Խմբեր</li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ti-email"></i>
+                            <span>Նամակներ</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/emailOutbox">Ուղարկված</a></li>
+                            <li><a href="#">Ստացված</a></li>
+                            <li><a href="/emailPage">Գրել նամակ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ion-md-settings"></i>
+                            <span>Կարգավորումներ</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="#">Բաժիններ</a></li>
+                            <li><a href="#">....</a></li>
+                            <li><a href="#">....</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <!-- start page title -->
+
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Left sidebar -->
+                        <div class="email-leftbar card">
+                            <a href="/emailPage" class="btn btn-danger rounded btn-custom btn-block waves-effect waves-light">Գրել նորը </a>
+
+                            <div class="mail-list mt-4">
+                                <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox" class="active">Մուտքային</a>
+                                <a href="/emailOutbox">Ուղարկված</a>
+<!--                                <a href="#">Important</a>-->
+<!--                                <a href="#">Draft</a>-->
+<!--                                <a href="#">Sent Mail</a>-->
+<!--                                <a href="#">Trash</a>-->
+                            </div>
+
+                            <h5 class="mt-4">Labels</h5>
+
+                            <div class="mail-list mt-4">
+                                <a href="#"><span class="mdi mdi-arrow-right-drop-circle text-info float-right"></span>Theme Support</a>
+                                <a href="#"><span class="mdi mdi-arrow-right-drop-circle text-warning float-right"></span>Freelance</a>
+                                <a href="#"><span class="mdi mdi-arrow-right-drop-circle text-primary float-right"></span>Social</a>
+                                <a href="#"><span class="mdi mdi-arrow-right-drop-circle text-danger float-right"></span>Friends</a>
+                                <a href="#"><span class="mdi mdi-arrow-right-drop-circle text-success float-right"></span>Family</a>
+                            </div>
+
+                            <h5 class="mt-4">Chat</h5>
+
+                            <div class="mt-4">
+                                <a href="#" class="media">
+                                    <img class="d-flex mr-3 rounded-circle" src="assets/images/users/user-2.jpg" alt="Generic placeholder image" height="36">
+                                    <div class="media-body chat-user-box">
+                                        <p class="user-title m-0">Scott Median</p>
+                                        <p class="text-muted">Hello</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="media">
+                                    <img class="d-flex mr-3 rounded-circle" src="assets/images/users/user-3.jpg" alt="Generic placeholder image" height="36">
+                                    <div class="media-body chat-user-box">
+                                        <p class="user-title m-0">Julian Rosa</p>
+                                        <p class="text-muted">What about our next..</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="media">
+                                    <img class="d-flex mr-3 rounded-circle" src="assets/images/users/user-4.jpg" alt="Generic placeholder image" height="36">
+                                    <div class="media-body chat-user-box">
+                                        <p class="user-title m-0">David Medina</p>
+                                        <p class="text-muted">Yeah everything is fine</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="media">
+                                    <img class="d-flex mr-3 rounded-circle" src="assets/images/users/user-6.jpg" alt="Generic placeholder image" height="36">
+                                    <div class="media-body chat-user-box">
+                                        <p class="user-title m-0">Jay Baker</p>
+                                        <p class="text-muted">Wow that's great</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- End Left sidebar -->
+
+                        <!-- Right Sidebar -->
+                        <div>
+                            <div>
+                                <div class="card" style="border-left: brown solid 1px">
+                                    <div class="card-body" style="margin-left: 15px">
+
+                                        <h4 class="card-title">Ուղարկել հաղորդագրություն</h4>
+                                        <p class="card-title-desc">հարկավոր է լրացնել նշված դաշտերը, ընտրել հաճախորդներին և սեղմել ուղարկել կոճակը</p>
+
+                                        <form action="/sendMassage" method="post">
+                                            <div class="form-group">
+                                                <label>Վարնագիր</label>
+                                                <div>
+                                                    <input data-parsley-type="alphanum" type="text" name="subject" class="form-control" required="" placeholder="Գրել հաղորդագրության վերհագիրը">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Բովանդակություն</label>
+                                                <div>
+                                                    <textarea type="text" name="text" class="form-control" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                            <span th:text="${massage}" style="font-size: x-large; color: #cf1534"></span>
+                                            <h4 class="card-title">Հաճախորդների ցանկ</h4>
+                                                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                                    <thead>
+                                                    <tr style="background-color: #7bd0ca">
+                                                        <th>Նշել</th>
+                                                        <th>Անուն / Ազգ․</th>
+                                                        <th>Ընդ․ գումար</th>
+                                                        <th>Կուտակ․%</th>
+                                                        <th>Կուտակ․գումար</th>
+                                                        <th>Պարտքի %</th>
+                                                        <th>Ընդ․ պարտք</th>
+                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                    <tr th:each="user: ${users}">
+                                                        <td>
+                                                            <input type="checkbox" th:name="users" th:value="${user.id}"/>
+                                                        </td>
+                                                        <td><span th:text="${user.name+' '+user.surname}"></span></td>
+                                                        <td><span th:text="${user.allSum}"></span></td>
+                                                        <td><span th:text="${user.percent}"></span></td>
+                                                        <td><span th:text="${user.percentSum}"></span></td>
+                                                        <td><span th:text="${user.creditPercent}"></span></td>
+                                                        <td><span th:text="${user.creditSum}"></span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="/"><button type="button" class="btn btn-outline-success waves-effect waves-light float-right">Չեղարկել</button></a>
+                                                <input style="width: 100px" class="btn btn-outline-danger waves-effect waves-light float-right" type="submit" value="ՈՒղարկել">
+                                            </form>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+
+                        <!-- end Col-9 -->
+
+                    </div>
+
+                </div><!-- End row -->
+
+
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        © <script>document.write(new Date().getFullYear())</script> <span class="d-none d-sm-inline-block"> S-Market <i class="mdi mdi mdi-heart text-danger"></i> by S.Khachatryan</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end main content-->
+</div>
+<!-- END layout-wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar="" class="h-100">
+        <div class="rightbar-title px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <!-- Settings -->
+        <hr class="mt-0">
+        <h6 class="text-center">Choose Layouts</h6>
+
+        <div class="p-4">
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked="">
+                <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
+                       data-bsstyle="assets/css/bootstrap-dark.min.css" data-appstyle="assets/css/app-dark.min.css">
+                <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="custom-control custom-switch mb-5">
+                <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
+                       data-appstyle="assets/css/app-rtl.min.css">
+                <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+            </div>
+
+            <a href="https://1.envato.market/grNDB" class="btn btn-primary btn-block mt-3" target="_blank"><i
+                    class="mdi mdi-cart mr-1"></i> Purchase Now</a>
+
+        </div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="assets/libs/jszip/jszip.min.js"></script>
+<script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+<script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+<script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<!-- Responsive examples -->
+<script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Datatable init js -->
+<script src="assets/js/pages/datatables.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+<script src="assets/libs/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+
+<!-- form mask init -->
+<script src="assets/js/pages/form-mask.init.js"></script>
+
+
+</body>
+</html>

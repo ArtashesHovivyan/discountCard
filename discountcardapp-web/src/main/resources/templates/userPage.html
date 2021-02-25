@@ -1,0 +1,384 @@
+﻿<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Զեղչի էջ |- S-Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!--    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!--My Css-->
+    <link href="assets/css/myStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box">
+
+                    <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/S-Market0.png" alt="" height="25">
+                                </span>
+                        <span class="logo-lg">
+                                    <img src="assets/images/S-Market4.png" alt="" height="25">
+                                </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
+                        id="vertical-menu-btn">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+            </div>
+            <div class="d-flex">
+<!--                <div class="dropdown d-none d-md-block ml-2;">-->
+<!--                    <a href="/log"> <button type="button" class="btn header-item waves-effect">-->
+<!--                        <img class="mr-2" src="assets/images/flags/login.png" height="18"> Login-->
+<!--                    </button></a>-->
+<!--                </div>-->
+                <div class="dropdown d-inline-block d-lg-none ml-2">
+                    <button type="button" class="btn header-item noti-icon waves-effect"
+                            id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="mdi mdi-magnify"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                         aria-labelledby="page-header-search-dropdown">
+
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..."
+                                           aria-label="Recipient's username">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="dropdown d-none d-lg-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                        <i class="mdi mdi-fullscreen"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+
+        <div data-simplebar="" class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">Գլխավոր</li>
+
+                    <li>
+                        <a href="/" class="waves-effect">
+                            <i class="ti-search"></i>
+                            <span>Փնտրել քարտը</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/allUsers" class=" waves-effect">
+                            <i class="ti-calendar"></i>
+                            <span>Բոլոր քարտերը</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/register" class=" waves-effect">
+                            <i class="ti-credit-card"></i><span class="badge badge-pill badge-primary float-right">ՆՈՐ</span>
+                            <span>Գրանցել քարդ</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-title">Ֆինանսներ</li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ti-view-grid"></i>
+                            <span>Գումար</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/cashRange">Հաշիվներ</a></li>
+                            <li><a href="/creditList">Պարտքի ցուցակ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-title">Խմբեր</li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ti-email"></i>
+                            <span>Նամակներ</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="/emailOutbox">Ուղարկված</a></li>
+                            <li><a href="#">Ստացված</a></li>
+                            <li><a href="/emailPage">Գրել նամակ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ion-md-settings"></i>
+                            <span>Կարգավորումներ</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="#">Բաժիններ</a></li>
+                            <li><a href="#">....</a></li>
+                            <li><a href="#">....</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div th:if="${massage}" class="spinner-grow text-success m-" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        <span th:text="${massage}" style="font-size: x-large;font-weight: bold; color: #20b426"></span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" style="background-color: #f5f5f5">
+                                    <div >
+                                        <div class="col-sm-12">
+                                            <div class="col-xs-12 col-sm-8">
+                                                <h2><span th:text="${user.name} + ' ' + ${user.surname}"></span></h2>
+                                                <p><strong>Id համար: </strong><span th:text="${user.id}"></span></p>
+                                                <p><strong>Հեռ: </strong><span th:text="${user.phone}"></span></p>
+                                                <p><strong>Պարտքի տոկոսադրույք: </strong><span th:text="${user.creditPercent+'%'}"></span></p>
+                                                <p><strong>էլ․հասցե: </strong><span th:text="${user.email}"></span></p>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <img src="assets/images/S-Emblem.png" style="height: 150px; width: 150px; margin-top: 50px;">
+<!--                                                <h2><strong>S-Market</st`rong></h2>-->
+<!--                                                <p><small>xxxSHSxxx</small></p>-->
+<!--                                                <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>-->
+                                            </div>
+
+                                            <form action="/addCash" method="post">
+                                            <div class="col-xs-12 col-sm-8">
+                                                <input type="number" name="sum" placeholder="0.0" style="width: 100%; height: 80px; border: #ffff00; border-radius: 12px; border: #cf1534 solid 1px; font-size: 70px; color: #cf1534; font-weight: bold">
+                                            </div>
+                                                <input type="hidden" name="user" th:value="${user.id}">
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <p>Ավելացնել</p>
+                                                <input type="number" name="sumPlus" placeholder="0.0" style="width: 100%; height: 47px; border: #ffff00; border-radius: 12px; border: #cf1534 solid 1px; font-size: 40px; color: #cf1534; font-weight: bold">
+                                            </div>
+                                                <div class="col-xs-12 divider text-center">
+                                                    <br>
+                                                <button type="submit" style="width: 100%" class="btn btn-primary btn-lg waves-effect waves-light">Հաստատել</button>
+                                                </div>
+                                            </form>
+
+                                        <div class="col-xs-12 divider text-center">
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <form action="/takeCash" method="get">
+                                                <h2><strong><span th:text="${user.sum}"></span></strong></h2>
+                                                <p><small>Կուտակված գումար</small></p>
+                                                    <input type="hidden" name="id" th:value="${user.id}">
+                                                <button type="submit" class="btn btn-success btn-block"><span class="fa fa-minus-circle"></span> Ծախսել </button></form>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <h2><strong><span th:text="${user.percent +'%'}"></span></strong></h2>
+                                                <p><small>Տոկոսադրույք</small></p>
+                                                <a th:href="${'/userProfile?id='+ user.id}"><button class="btn btn-info btn-block"><span class="fa fa-user"></span> Անձնական էջ </button></a>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 emphasis">
+                                                <form action="/credit" method="get">
+                                                    <h2><strong><span th:text="${user.creditSum}"></span></strong></h2>
+                                                    <p><small>Պարտքի չափ</small></p>
+                                                    <input type="hidden" name="id" th:value="${user.id}">
+                                                    <button type="submit" class="btn btn-success btn-block"><span class="fa fa-minus-circle"></span> Փոխել </button></form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- container-fluid -->
+                </div>
+
+            </div> <!-- container-fluid -->
+        </div>
+
+
+<!--        <div class="card">-->
+<!--            <div class="card-body">-->
+<!--                <h4 class="card-title">Հնարավորությունները (Roles)</h4>-->
+<!--                <div th:if="${user == null}">-->
+<!--                    <p class="card-title-desc">Նշեք այն բոլոր կետերը, որոնք հասանելի են ստեղծվող բաժնին</p>-->
+<!--                    <tr th:each="role, switch: ${allRolls}">-->
+<!--                        <td>-->
+<!--                            <input type="checkbox" id="vehicle1" th:name="roles" th:value="${role.id}">-->
+<!--                            <label for="vehicle1"><span th:text="${role.name}"></span></label><br>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </div>-->
+<!--                <div th:if="${user != null}">-->
+<!--                    <p class="card-title-desc">Նշված հնարավորություններն են՝</p>-->
+<!--                    <tr th:each="role, switch: ${changedRoles}">-->
+<!--                        <td>-->
+<!--                            <span th:text="${switch.index+1+ '. '+role.name}"></span><br>-->
+<!--                            <input hidden name="roles" th:value="${role.id}">-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <!-- End Page-content -->
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        © <script>document.write(new Date().getFullYear())</script> <span class="d-none d-sm-inline-block"> S-Market <i class="mdi mdi mdi-heart text-danger"></i> by S.Khachatryan</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar="" class="h-100">
+        <div class="rightbar-title px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <!-- Settings -->
+        <hr class="mt-0">
+        <h6 class="text-center">Choose Layouts</h6>
+
+        <div class="p-4">
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked="">
+                <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
+                       data-bsstyle="assets/css/bootstrap-dark.min.css" data-appstyle="assets/css/app-dark.min.css">
+                <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="custom-control custom-switch mb-5">
+                <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
+                       data-appstyle="assets/css/app-rtl.min.css">
+                <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+            </div>
+
+            <a href="https://1.envato.market/grNDB" class="btn btn-primary btn-block mt-3" target="_blank"><i
+                    class="mdi mdi-cart mr-1"></i> Purchase Now</a>
+
+        </div>
+
+    </div> <!-- end slimscroll-menu-->
+</div></div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="assets/libs/jszip/jszip.min.js"></script>
+<script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+<script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+<script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<!-- Responsive examples -->
+<script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Datatable init js -->
+<script src="assets/js/pages/datatables.init.js"></script>
+
+<script src="assets/js/app.js"></script>
+
+<script src="assets/libs/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+
+<!-- form mask init -->
+<script src="assets/js/pages/form-mask.init.js"></script>
+
+
+</body>
+</html>

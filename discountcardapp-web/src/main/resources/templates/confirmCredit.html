@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Հաստատել պարտքը |- S-Market</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+        <meta content="Themesbrand" name="author">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+        <!--My Css-->
+        <link href="assets/css/myStyle.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+            <!-- Begin page -->
+            <div class="authentication-bg d-flex align-items-center pb-0 vh-100">
+                <div class="content-center w-100">
+                        <div class="container">
+                            <div class="card mo-mt-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-4 ml-auto">
+                                            <div class="ex-page-content">
+                                                <h1 class="text-dark display-1 mt-4"><span th:text="${credit.sum}"></span></h1>
+                                                <h4 class="mb-4">ԶԳՈՒՇԱՑՈՒՄ</h4>
+                                                <p class="mb-5">Մուտքագրվել է "0" կամ նշված չափը գերազանցող գումար</p>
+                                                <form action="/credit" method="get">
+                                                    <input type="hidden" name="id" th:value="${credit.user.id}">
+                                                    <div class="col-xs-12 col-sm-4 emphasis">
+                                                        <button type="submit" class="btn btn-primary mb-5 waves-effect waves-light">Վերադառնալ</button>
+                                                    </div>
+                                                </form>
+                                                <form action="/confirmCredit" method="post">
+                                                    <input type="hidden" name="sum" th:value="${credit.sum}" >
+                                                    <input type="hidden" name="user" th:value="${credit.user.id}">
+                                                    <div class="col-xs-12 col-sm-4 emphasis">
+                                                        <button type="submit" style="height: 100%" class="btn btn-primary btn-lg waves-effect waves-light">Հաստատել</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                
+                                        </div>
+                                        <div class="col-lg-5 mx-auto">
+                                            <img src="assets/images/Warning1.png" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                    </div>`
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end container -->
+                </div>
+    
+            </div>
+            <!-- end error page -->
+
+      
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
